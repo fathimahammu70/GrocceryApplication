@@ -14,7 +14,11 @@ public WebDriver driver;
 		}
 	@FindBy(name="username") WebElement userName;
 	@FindBy(name="password") WebElement password;
-	@FindBy(xpath = "//button[text()='Sign In']") WebElement loginbutton;
+	@FindBy(xpath = "//button[text()='Sign In']") WebElement signInButton;
+	@FindBy(xpath="//p[text()='Dashboard']") WebElement dashboard;
+	@FindBy(xpath="//b[text()='7rmart supermarket']") WebElement title;
+	@FindBy(xpath="//p[text()='Admin Users']")WebElement adminUsers;
+	@FindBy(xpath="//p[text()='Sign in to start your session']") WebElement heading;
 	
 	
 	
@@ -25,10 +29,22 @@ public WebDriver driver;
 	public void enterPasswordOnPasswordField(String passwordvalue) {
 		password.sendKeys(passwordvalue);
 	}
-	public void loginButtonClick() {
-		loginbutton.click();
+	public void SignInClick() {
+		signInButton.click();
+	}
+	public boolean isDashboardDisplayed() {
+		return dashboard.isDisplayed();
+	}
+	public String getTheTitle() {
+		return title.getText();
+}
+	public boolean isAdminUsersDisplayed() {
+		return adminUsers.isDisplayed();
+}
+	public String getTheHeading() {
+		return heading.getText();
+		
 	}
 }
-
 
 
