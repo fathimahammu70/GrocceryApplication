@@ -13,6 +13,7 @@ public class HomePage {
 		}
 		@FindBy(xpath="//a[@class='nav-link' and @ data-toggle='dropdown']") WebElement admin;
 		@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/logout']\")") WebElement logout;
+		@FindBy(xpath="//p[text()='Admin Users']/parent::div//following-sibling::a") WebElement moreInfoAdminLink;
 
 		
 		public void adminButtonClick() {
@@ -21,6 +22,9 @@ public class HomePage {
 		
 		public void logoutButtonClick() {
 			logout.click();
+		}
+		public void clickOnMoreInfoLink() {
+			moreInfoAdminLink.click();
 		}
 	}
 

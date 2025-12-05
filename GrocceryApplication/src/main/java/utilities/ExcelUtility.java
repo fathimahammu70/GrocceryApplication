@@ -14,7 +14,7 @@ package utilities;
 		static XSSFSheet sh;
 		public static String getStringData(int row,int col,String sheet) throws IOException
 		{ 
-			f=new FileInputStream("C:\\Users\\soumi\\eclipse-workspace\\GrocceryApplication\\src\\test\\resources\\TestDataa.xlsx"); 
+			f=new FileInputStream("C:\\Users\\soumi\\git\\SeleniumAutomation\\GrocceryApplication\\src\\test\\resources\\TestDataa.xlsx"); 
 			w=new XSSFWorkbook(f);
 			sh=w.getSheet(sheet);
 			XSSFRow r=sh.getRow(row);
@@ -23,7 +23,7 @@ package utilities;
 		} 
 		public static String getIntegerData(int row,int col,String sheet)throws IOException//to read Integer data 
 		{ 
-			f=new FileInputStream("C:\\Users\\soumi\\eclipse-workspace\\GrocceryApplication\\src\\test\\resources\\TestDataa.xlsx"); 
+			f=new FileInputStream("C:\\Users\\soumi\\git\\SeleniumAutomation\\GrocceryApplication\\src\\test\\resources\\TestDataa.xlsx"); 
 			w=new XSSFWorkbook(f); 
 			sh=w.getSheet(sheet); 
 			XSSFRow r=sh.getRow(row); 
