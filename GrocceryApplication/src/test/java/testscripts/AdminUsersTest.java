@@ -10,6 +10,7 @@ import pages.AdminUsersPage;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class AdminUsersTest extends Base {
 	@Test
@@ -24,8 +25,9 @@ public class AdminUsersTest extends Base {
 		homePage.clickOnMoreInfoLink();
 		AdminUsersPage adminUsersPage = new AdminUsersPage(driver);
 		adminUsersPage.clickOnNewButton();
-		String newUsername = ExcelUtility.getStringData(0, 0, "AdminUsersPage");
-		String newPassword = ExcelUtility.getStringData(0, 1, "AdminUsersPage");
+		FakerUtility fakerUtility=new FakerUtility();
+		String newUsername = fakerUtility.createRandomUserName();
+		String newPassword = fakerUtility.createFakePassword();
 		String userType = ExcelUtility.getStringData(0, 2, "AdminUsersPage");
 		adminUsersPage.enterUserNameOnUserNameField(newUsername);
 		adminUsersPage.enterPasswordOnPasswordField(newPassword);
@@ -34,7 +36,7 @@ public class AdminUsersTest extends Base {
 		boolean userAddedAlertDisplayed=adminUsersPage.userAddedAlertMessage();
 		Assert.assertTrue(userAddedAlertDisplayed,"user not able to add new user.");
 
-	}
+	}   
 
 	@Test
 	public void verifyWhetherAdminIsAbleToSearchTheNewlyAddedUser() throws IOException {
