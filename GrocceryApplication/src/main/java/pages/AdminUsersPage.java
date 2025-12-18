@@ -13,66 +13,88 @@ public class AdminUsersPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-	@FindBy(xpath="//a[contains(text(),' New')]") WebElement newLink;
-	@FindBy(id="username") WebElement userName;
-	@FindBy(id="password") WebElement password;
-	@FindBy(id="user_type") WebElement userType;
-	@FindBy(xpath="//button[@type='submit' and @name='Create']") WebElement saveButton;
-	@FindBy(xpath="//a[contains(text(),' Search')]") WebElement searchLink;
-	@FindBy(id="un") WebElement searchUserName;
-	@FindBy(name="Search") WebElement searchButton;
-	@FindBy(xpath="//a[contains(text(),' Reset')]") WebElement resetLink;
-	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible' or @class='alert alert-danger alert-dismissible']")WebElement userAddAlert;
-	@FindBy(xpath="//h4[text()='Admin Users']") WebElement searchAdminUsersResultTab;
-	@FindBy(xpath="//h4[text()='Admin Users']//ancestor::div[@class='card']") WebElement adminUsersList;
-	
-	public void clickOnNewButton() {
+
+	@FindBy(xpath = "//a[contains(text(),' New')]")
+	WebElement newLink;
+	@FindBy(id = "username")
+	WebElement userName;
+	@FindBy(id = "password")
+	WebElement password;
+	@FindBy(id = "user_type")
+	WebElement userType;
+	@FindBy(xpath = "//button[@type='submit' and @name='Create']")
+	WebElement saveButton;
+	@FindBy(xpath = "//a[contains(text(),' Search')]")
+	WebElement searchLink;
+	@FindBy(id = "un")
+	WebElement searchUserName;
+	@FindBy(name = "Search")
+	WebElement searchButton;
+	@FindBy(xpath = "//a[contains(text(),' Reset')]")
+	WebElement resetLink;
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible' or @class='alert alert-danger alert-dismissible']")
+	WebElement userAddAlert;
+	@FindBy(xpath = "//h4[text()='Admin Users']")
+	WebElement searchAdminUsersResultTab;
+	@FindBy(xpath = "//h4[text()='Admin Users']//ancestor::div[@class='card']")
+	WebElement adminUsersList;
+
+	public AdminUsersPage clickOnNewButton() {
 		newLink.click();
+		return this;
 	}
-	
-	public void enterUserNameOnUserNameField(String newUserNameValue) {
+
+	public AdminUsersPage enterNewUserNameOnUserNameField(String newUserNameValue) {
 		userName.sendKeys(newUserNameValue);
+		return this; 
 	}
-	
-	public void enterPasswordOnPasswordField(String newPasswordValue) {
+
+	public AdminUsersPage enterNewPasswordOnPasswordField(String newPasswordValue) {
 		password.sendKeys(newPasswordValue);
+		return this;
 	}
-	
-	public void selectTheUserType(String userTypeValue) {
-		Select select=new Select(userType);
+
+	public AdminUsersPage selectTheUserType(String userTypeValue) {
+		Select select = new Select(userType);
 		select.selectByVisibleText(userTypeValue);
+		return this;
 	}
-	public void saveButtonClick() {
+
+	public AdminUsersPage saveButtonClick() {
 		saveButton.click();
+		return this;
 	}
-	
-	public void searchButtonClick() {
+
+	public AdminUsersPage searchButtonClick() {
 		searchLink.click();
+		return this;
 	}
-	
-	public void enterTheUserNameToSearch(String userNameValue) {
+
+	public AdminUsersPage enterTheUserNameToSearch(String userNameValue) {
 		searchUserName.sendKeys(userNameValue);
+		return this;
 	}
-	
-	public void searchButtonClickToCheckUserName() {
+
+	public AdminUsersPage searchButtonClickToCheckUserName() {
 		searchButton.click();
+		return this;
 	}
-	
-	public void resetButtonClick() {
+
+	public AdminUsersPage resetButtonClick() {
 		resetLink.click();
+		return this;
 	}
-	
+
 	public boolean userAddedAlertMessage() {
 		return userAddAlert.isDisplayed();
 	}
-	
+
 	public boolean isSearchAdminUsersResultTabDisplayed() {
 		return searchAdminUsersResultTab.isDisplayed();
 	}
-	
+
 	public boolean isAdminUsersListDisplayed() {
 		return adminUsersList.isDisplayed();
 	}
-	
+
 }

@@ -23,30 +23,37 @@ public class ManageNewsPage {
 	    @FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertNewsCreatedSuccecssfully;
 	   
 	    
-	    public void clickNewButton() {
+	    public ManageNewsPage clickNewButton() {
 	        newButton.click();
+	        return this;
 	    }
-	    public void enterTheNews(String newsvalue) {
+	    public ManageNewsPage enterTheNews(String newsvalue) {
 	        searchNewsField.sendKeys(newsvalue);
+	        return this;
 	    }
-	    public void clickSaveButton() {
+	    public ManageNewsPage clickSaveButton() {
 	    	saveButton.click();
+	    	return this;
 	    }
 	    
-	    public void clickSearchButton() {
+	    public ManageNewsPage clickSearchButton() {
 	        searchButton.click();
+	        return this;
 	    }
-	    public void enterTitleToSearch(String titlevalue) {
+	    public ManageNewsPage enterTitleToSearch(String titlevalue) {
 	    	searchTile.sendKeys(titlevalue);
+	    	return this;
 	    }
-	    public void clickResetButton() {
+	    public ManageNewsPage clickResetButton() {
 	        resetButton.click();
+	        return this;
 	    }
 	    public boolean isNewsListDisplayed() {
 	        return newsTable.isDisplayed();
 	    }
-	    public void clickSearchResultButton() {
+	    public ManageNewsPage clickSearchResultButton() {
 	    	searchResultButton.click();
+	    	return this;
 	    }
 	   
 
@@ -54,5 +61,6 @@ public class ManageNewsPage {
 	    	return alertNewsCreatedSuccecssfully.isDisplayed();
 	    	
 	    }
+		
 
 }
