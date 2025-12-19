@@ -1,78 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-17T18:57:59 IST" name="Suite" finished-at="2025-12-17T18:58:16 IST" duration-ms="16727">
+  <suite started-at="2025-12-19T14:13:36 IST" name="parallel" finished-at="2025-12-19T14:14:56 IST" duration-ms="79331">
     <groups>
-      <group name="smoke">
-        <method signature="LoginTest.verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testscripts.LoginTest@508dec2b]" name="verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword" class="testscripts.LoginTest"/>
-      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-12-17T18:57:59 IST" name="Test" finished-at="2025-12-17T18:58:16 IST" duration-ms="16727">
-      <class name="testscripts.LoginTest">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testscripts.LoginTest@508dec2b]" started-at="2025-12-17T18:58:00 IST" name="initializeBrowser" finished-at="2025-12-17T18:58:07 IST" duration-ms="7486" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testscripts.LoginTest@508dec2b]" started-at="2025-12-17T18:58:07 IST" name="verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword" description="Verify user is able to login with invalid credentials" data-provider="loginProvider" finished-at="2025-12-17T18:58:09 IST" duration-ms="1999" status="PASS">
+    <test started-at="2025-12-19T14:13:36 IST" name="Test1" finished-at="2025-12-19T14:14:30 IST" duration-ms="53996">
+      <class name="testscripts.AdminUsersTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:13:36 IST" name="initializeBrowser" finished-at="2025-12-19T14:13:51 IST" duration-ms="14741" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin22]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.LoginTest@508dec2b]" started-at="2025-12-17T18:58:09 IST" name="driverQuit" finished-at="2025-12-17T18:58:09 IST" duration-ms="7" status="PASS">
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyWhetherAdminIsAbleToAddNewUser()[pri:1, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:13:51 IST" name="verifyWhetherAdminIsAbleToAddNewUser" description="Verify whether admin is able to add new user" finished-at="2025-12-19T14:14:02 IST" duration-ms="10978" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherAdminIsAbleToAddNewUser -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:02 IST" name="driverQuit" finished-at="2025-12-19T14:14:06 IST" duration-ms="3521" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword status=SUCCESS method=LoginTest.verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testscripts.LoginTest@508dec2b] output={null}]]]>
+                <![CDATA[[TestResult name=verifyWhetherAdminIsAbleToAddNewUser status=SUCCESS method=AdminUsersTest.verifyWhetherAdminIsAbleToAddNewUser()[pri:1, instance:testscripts.AdminUsersTest@5656be13] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testscripts.LoginTest@508dec2b]" started-at="2025-12-17T18:58:09 IST" name="initializeBrowser" finished-at="2025-12-17T18:58:15 IST" duration-ms="5485" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testscripts.LoginTest@508dec2b]" started-at="2025-12-17T18:58:15 IST" name="verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword" description="Verify user is able to login with invalid credentials" data-provider="loginProvider" finished-at="2025-12-17T18:58:16 IST" duration-ms="1622" status="PASS">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:06 IST" name="initializeBrowser" finished-at="2025-12-19T14:14:12 IST" duration-ms="6433" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.LoginTest@508dec2b]" started-at="2025-12-17T18:58:16 IST" name="driverQuit" finished-at="2025-12-17T18:58:16 IST" duration-ms="6" status="PASS">
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyWhetherAdminIsAbleToSearchTheNewlyAddedUser()[pri:2, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:12 IST" name="verifyWhetherAdminIsAbleToSearchTheNewlyAddedUser" description="Verify Whether Admin Is Able To Search The Newly AddedUser" finished-at="2025-12-19T14:14:17 IST" duration-ms="4592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherAdminIsAbleToSearchTheNewlyAddedUser -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:17 IST" name="driverQuit" finished-at="2025-12-19T14:14:19 IST" duration-ms="2799" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword status=SUCCESS method=LoginTest.verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testscripts.LoginTest@508dec2b] output={null}]]]>
+                <![CDATA[[TestResult name=verifyWhetherAdminIsAbleToSearchTheNewlyAddedUser status=SUCCESS method=AdminUsersTest.verifyWhetherAdminIsAbleToSearchTheNewlyAddedUser()[pri:2, instance:testscripts.AdminUsersTest@5656be13] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testscripts.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:19 IST" name="initializeBrowser" finished-at="2025-12-19T14:14:25 IST" duration-ms="5833" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyWhetherAdminIsAbleToResetTheUsersList()[pri:3, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:25 IST" name="verifyWhetherAdminIsAbleToResetTheUsersList" description="Verify Whether Admin Is Able To Reset The UsersList" finished-at="2025-12-19T14:14:29 IST" duration-ms="3907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherAdminIsAbleToResetTheUsersList -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:29 IST" name="driverQuit" finished-at="2025-12-19T14:14:30 IST" duration-ms="994" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhetherAdminIsAbleToResetTheUsersList status=SUCCESS method=AdminUsersTest.verifyWhetherAdminIsAbleToResetTheUsersList()[pri:3, instance:testscripts.AdminUsersTest@5656be13] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+      </class> <!-- testscripts.AdminUsersTest -->
+    </test> <!-- Test1 -->
+    <test started-at="2025-12-19T14:14:30 IST" name="Test2" finished-at="2025-12-19T14:14:56 IST" duration-ms="25236">
+      <class name="testscripts.HomeTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.HomeTest@510f3d34]" started-at="2025-12-19T14:14:30 IST" name="initializeBrowser" finished-at="2025-12-19T14:14:45 IST" duration-ms="15069" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyWhetherUserIsAbleToSuccessfullyLogout()[pri:1, instance:testscripts.HomeTest@510f3d34]" started-at="2025-12-19T14:14:45 IST" name="verifyWhetherUserIsAbleToSuccessfullyLogout" description="Verify whether User is able to successfully logout" finished-at="2025-12-19T14:14:49 IST" duration-ms="3954" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherUserIsAbleToSuccessfullyLogout -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.HomeTest@510f3d34]" started-at="2025-12-19T14:14:49 IST" name="driverQuit" finished-at="2025-12-19T14:14:56 IST" duration-ms="6122" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToSuccessfullyLogout status=SUCCESS method=HomeTest.verifyWhetherUserIsAbleToSuccessfullyLogout()[pri:1, instance:testscripts.HomeTest@510f3d34] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+      </class> <!-- testscripts.HomeTest -->
+    </test> <!-- Test2 -->
+  </suite> <!-- parallel -->
 </testng-results>

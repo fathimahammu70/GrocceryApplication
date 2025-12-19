@@ -1,3 +1,4 @@
+
 package pages;
 
 import org.openqa.selenium.WebDriver;
@@ -15,17 +16,12 @@ public class HomePage {
 
 	@FindBy(xpath = "//a[@class='nav-link' and @ data-toggle='dropdown']")
 	WebElement admin;
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/logout']\")")
+	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/logout']")
 	WebElement logout;
-	@FindBy(xpath = "//p[text()='Admin Users']/parent::div//following-sibling::a")
+	@FindBy(xpath = "//a[contains(@href,'list-admin') and contains(@class,'small-box-footer')]")
 	WebElement moreInfoAdminLink;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news']")
 	WebElement moreInfomanageNews;
-
-	public ManageNewsPage clickOnMoreInfomanageNews() {
-		moreInfomanageNews.click();
-		return new ManageNewsPage(driver);
-	}
 
 	public HomePage adminButtonClick() {
 		admin.click();
@@ -41,4 +37,10 @@ public class HomePage {
 		moreInfoAdminLink.click();
 		return new AdminUsersPage(driver);
 	}
+
+	public ManageNewsPage clickOnMoreInfomanageNews() {
+		moreInfomanageNews.click();
+		return new ManageNewsPage(driver);
+	}
+
 }

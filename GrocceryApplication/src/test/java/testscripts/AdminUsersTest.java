@@ -18,8 +18,8 @@ public class AdminUsersTest extends Base {
 	AdminUsersPage adminuser;
 	@Test(priority = 1, description = "Verify whether admin is able to add new user")
 	public void verifyWhetherAdminIsAbleToAddNewUser() throws IOException {
-		String username = ExcelUtility.getStringData(0, 0, "loginPage");
-		String password = ExcelUtility.getStringData(0, 1, "loginPage");
+		String username = ExcelUtility.getStringData(0, 0, "loginpage");
+		String password = ExcelUtility.getStringData(0, 1, "loginpage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameOnUserNameField(username).enterPasswordOnPasswordField(password);
 		home=loginPage.SignInClick();
@@ -39,8 +39,8 @@ public class AdminUsersTest extends Base {
 
 	@Test(priority = 2, description = "Verify Whether Admin Is Able To Search The Newly AddedUser")
 	public void verifyWhetherAdminIsAbleToSearchTheNewlyAddedUser() throws IOException {
-		String username = ExcelUtility.getStringData(0, 0, "loginPage");
-		String password = ExcelUtility.getStringData(0, 1, "loginPage");
+		String username = ExcelUtility.getStringData(0, 0, "loginpage");
+		String password = ExcelUtility.getStringData(0, 1, "loginpage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameOnUserNameField(username).enterPasswordOnPasswordField(password);
 		home=loginPage.SignInClick();
@@ -55,13 +55,13 @@ public class AdminUsersTest extends Base {
 
 	@Test(priority = 3, description = "Verify Whether Admin Is Able To Reset The UsersList")
 	public void verifyWhetherAdminIsAbleToResetTheUsersList() throws IOException {
-		String username = ExcelUtility.getStringData(0, 0, "loginPage");
-		String password = ExcelUtility.getStringData(0, 1, "loginPage");
+		String username = ExcelUtility.getStringData(0, 0, "loginpage");
+		String password = ExcelUtility.getStringData(0, 1, "loginpage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameOnUserNameField(username).enterPasswordOnPasswordField(password);
 		home=loginPage.SignInClick();
 		
-		home.clickOnMoreInfoAdminLink();
+		adminuser=home.clickOnMoreInfoAdminLink();
 		adminuser.resetButtonClick();
 		boolean adminUsersListDisplayed = adminuser.isAdminUsersListDisplayed();
 		Assert.assertTrue(adminUsersListDisplayed, Constants.RESETERROR);
