@@ -1,13 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="2" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-19T14:13:36 IST" name="parallel" finished-at="2025-12-19T14:14:56 IST" duration-ms="79331">
+  <suite started-at="2025-12-19T19:10:15 IST" name="Suite" finished-at="2025-12-19T19:10:40 IST" duration-ms="24609">
     <groups>
+      <group name="smoke">
+        <method signature="LoginTest.verifyWhetherUserIsAbleToLoginWithValidcredentials(java.lang.String,java.lang.String)[pri:1, instance:testscripts.LoginTest@51399530]" name="verifyWhetherUserIsAbleToLoginWithValidcredentials" class="testscripts.LoginTest"/>
+        <method signature="LoginTest.verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testscripts.LoginTest@51399530]" name="verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword" class="testscripts.LoginTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-12-19T14:13:36 IST" name="Test1" finished-at="2025-12-19T14:14:30 IST" duration-ms="53996">
-      <class name="testscripts.AdminUsersTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:13:36 IST" name="initializeBrowser" finished-at="2025-12-19T14:13:51 IST" duration-ms="14741" status="PASS">
+    <test started-at="2025-12-19T19:10:15 IST" name="Test" finished-at="2025-12-19T19:10:40 IST" duration-ms="24609">
+      <class name="testscripts.LoginTest">
+        <test-method signature="verifyWhetherUserIsAbleToLoginWithValidcredentials(java.lang.String,java.lang.String)[pri:1, instance:testscripts.LoginTest@51399530]" started-at="2025-12-19T19:10:16 IST" name="verifyWhetherUserIsAbleToLoginWithValidcredentials" description="Verify user can login with valid credentials" finished-at="2025-12-19T19:10:16 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Cannot inject @Test annotated Method [verifyWhetherUserIsAbleToLoginWithValidcredentials] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [verifyWhetherUserIsAbleToLoginWithValidcredentials] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:442)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
+at org.testng.internal.Parameters.createParameters(Parameters.java:699)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:885)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherUserIsAbleToLoginWithValidcredentials -->
+        <test-method signature="verifyWhetherUserIsAbleToLoginWithValidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:2, instance:testscripts.LoginTest@51399530]" started-at="2025-12-19T19:10:16 IST" name="verifyWhetherUserIsAbleToLoginWithValidUsernameAndInvalidPassword" description="Verify user is able to login with valid username and invalid password" finished-at="2025-12-19T19:10:16 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Cannot inject @Test annotated Method [verifyWhetherUserIsAbleToLoginWithValidUsernameAndInvalidPassword] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [verifyWhetherUserIsAbleToLoginWithValidUsernameAndInvalidPassword] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:442)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
+at org.testng.internal.Parameters.createParameters(Parameters.java:699)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:885)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherUserIsAbleToLoginWithValidUsernameAndInvalidPassword -->
+        <test-method signature="verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndValidPassword(java.lang.String,java.lang.String)[pri:3, instance:testscripts.LoginTest@51399530]" started-at="2025-12-19T19:10:16 IST" name="verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndValidPassword" description="Verify user is able to login with invalid username and valid password" finished-at="2025-12-19T19:10:16 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Cannot inject @Test annotated Method [verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndValidPassword] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndValidPassword] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:442)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
+at org.testng.internal.Parameters.createParameters(Parameters.java:699)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:885)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndValidPassword -->
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.LoginTest@51399530]" started-at="2025-12-19T19:10:16 IST" name="initializeBrowser" finished-at="2025-12-19T19:10:25 IST" duration-ms="9750" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,22 +154,34 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherAdminIsAbleToAddNewUser()[pri:1, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:13:51 IST" name="verifyWhetherAdminIsAbleToAddNewUser" description="Verify whether admin is able to add new user" finished-at="2025-12-19T14:14:02 IST" duration-ms="10978" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWhetherAdminIsAbleToAddNewUser -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:02 IST" name="driverQuit" finished-at="2025-12-19T14:14:06 IST" duration-ms="3521" status="PASS">
+        <test-method signature="verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testscripts.LoginTest@51399530]" started-at="2025-12-19T19:10:25 IST" name="verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword" description="Verify user is able to login with invalid credentials" data-provider="loginProvider" finished-at="2025-12-19T19:10:27 IST" duration-ms="1614" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyWhetherAdminIsAbleToAddNewUser status=SUCCESS method=AdminUsersTest.verifyWhetherAdminIsAbleToAddNewUser()[pri:1, instance:testscripts.AdminUsersTest@5656be13] output={null}]]]>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin22]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.LoginTest@51399530]" started-at="2025-12-19T19:10:27 IST" name="driverQuit" finished-at="2025-12-19T19:10:30 IST" duration-ms="2908" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword status=SUCCESS method=LoginTest.verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testscripts.LoginTest@51399530] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:06 IST" name="initializeBrowser" finished-at="2025-12-19T14:14:12 IST" duration-ms="6433" status="PASS">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.LoginTest@51399530]" started-at="2025-12-19T19:10:30 IST" name="initializeBrowser" finished-at="2025-12-19T19:10:36 IST" duration-ms="6221" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -44,78 +192,34 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherAdminIsAbleToSearchTheNewlyAddedUser()[pri:2, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:12 IST" name="verifyWhetherAdminIsAbleToSearchTheNewlyAddedUser" description="Verify Whether Admin Is Able To Search The Newly AddedUser" finished-at="2025-12-19T14:14:17 IST" duration-ms="4592" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWhetherAdminIsAbleToSearchTheNewlyAddedUser -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:17 IST" name="driverQuit" finished-at="2025-12-19T14:14:19 IST" duration-ms="2799" status="PASS">
+        <test-method signature="verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testscripts.LoginTest@51399530]" started-at="2025-12-19T19:10:36 IST" name="verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword" description="Verify user is able to login with invalid credentials" data-provider="loginProvider" finished-at="2025-12-19T19:10:38 IST" duration-ms="1460" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyWhetherAdminIsAbleToSearchTheNewlyAddedUser status=SUCCESS method=AdminUsersTest.verifyWhetherAdminIsAbleToSearchTheNewlyAddedUser()[pri:2, instance:testscripts.AdminUsersTest@5656be13] output={null}]]]>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.LoginTest@51399530]" started-at="2025-12-19T19:10:38 IST" name="driverQuit" finished-at="2025-12-19T19:10:40 IST" duration-ms="2225" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword status=SUCCESS method=LoginTest.verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testscripts.LoginTest@51399530] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:19 IST" name="initializeBrowser" finished-at="2025-12-19T14:14:25 IST" duration-ms="5833" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherAdminIsAbleToResetTheUsersList()[pri:3, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:25 IST" name="verifyWhetherAdminIsAbleToResetTheUsersList" description="Verify Whether Admin Is Able To Reset The UsersList" finished-at="2025-12-19T14:14:29 IST" duration-ms="3907" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWhetherAdminIsAbleToResetTheUsersList -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.AdminUsersTest@5656be13]" started-at="2025-12-19T14:14:29 IST" name="driverQuit" finished-at="2025-12-19T14:14:30 IST" duration-ms="994" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyWhetherAdminIsAbleToResetTheUsersList status=SUCCESS method=AdminUsersTest.verifyWhetherAdminIsAbleToResetTheUsersList()[pri:3, instance:testscripts.AdminUsersTest@5656be13] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- testscripts.AdminUsersTest -->
-    </test> <!-- Test1 -->
-    <test started-at="2025-12-19T14:14:30 IST" name="Test2" finished-at="2025-12-19T14:14:56 IST" duration-ms="25236">
-      <class name="testscripts.HomeTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.HomeTest@510f3d34]" started-at="2025-12-19T14:14:30 IST" name="initializeBrowser" finished-at="2025-12-19T14:14:45 IST" duration-ms="15069" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherUserIsAbleToSuccessfullyLogout()[pri:1, instance:testscripts.HomeTest@510f3d34]" started-at="2025-12-19T14:14:45 IST" name="verifyWhetherUserIsAbleToSuccessfullyLogout" description="Verify whether User is able to successfully logout" finished-at="2025-12-19T14:14:49 IST" duration-ms="3954" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWhetherUserIsAbleToSuccessfullyLogout -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.HomeTest@510f3d34]" started-at="2025-12-19T14:14:49 IST" name="driverQuit" finished-at="2025-12-19T14:14:56 IST" duration-ms="6122" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToSuccessfullyLogout status=SUCCESS method=HomeTest.verifyWhetherUserIsAbleToSuccessfullyLogout()[pri:1, instance:testscripts.HomeTest@510f3d34] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- testscripts.HomeTest -->
-    </test> <!-- Test2 -->
-  </suite> <!-- parallel -->
+      </class> <!-- testscripts.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

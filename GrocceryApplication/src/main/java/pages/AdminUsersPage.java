@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+
+import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class AdminUsersPage {
 	public WebDriver driver;
@@ -55,12 +57,14 @@ public class AdminUsersPage {
 	}
 
 	public AdminUsersPage selectTheUserType(String userTypeValue) {
-		Select select = new Select(userType);
-		select.selectByVisibleText(userTypeValue);
+		PageUtility page=new PageUtility();
+		page.selectDropdownWithValue(userType, userTypeValue);
 		return this;
 	}
 
 	public AdminUsersPage saveButtonClick() {
+		WaitUtility wait=new WaitUtility();
+		wait.waitUntilElementToBeClickable(driver, saveButton);
 		saveButton.click();
 		return this;
 	}

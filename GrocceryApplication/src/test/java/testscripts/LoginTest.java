@@ -14,21 +14,22 @@ import utilities.ExcelUtility;
 
 public class LoginTest extends Base {
 	HomePage home;
+
 	@Test(priority = 1, description = "Verify user can login with valid credentials", groups = { "smoke" })
-	public void verifyWhetherUserIsAbleToLoginWithValidcredentials(String usernamevalue, String passwordvalue) throws IOException {
-		/*String usernamevalue = ExcelUtility.getStringData(0, 0, "Loginpage");
-		String passwordvalue = ExcelUtility.getStringData(0, 1, "Loginpage");*/
+	public void verifyWhetherUserIsAbleToLoginWithValidcredentials() throws IOException {
+		String usernamevalue = ExcelUtility.getStringData(0, 0, "Loginpage");
+		String passwordvalue = ExcelUtility.getStringData(0, 1, "Loginpage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameOnUserNameField(usernamevalue).enterPasswordOnPasswordField(passwordvalue);
-		home=loginPage.SignInClick();
+		home = loginPage.SignInClick();
 		boolean dashboardDisplayed = loginPage.isDashboardDisplayed();
 		Assert.assertTrue(dashboardDisplayed, Constants.VALIDCREDENTIALSERROR);
 	}
 
 	@Test(priority = 2, description = "Verify user is able to login with valid username and invalid password")
-	public void verifyWhetherUserIsAbleToLoginWithValidUsernameAndInvalidPassword(String usernamevalue, String passwordvalue) throws IOException {
-		/*String usernamevalue = ExcelUtility.getStringData(1, 0, "Loginpage");
-		String passwordvalue = ExcelUtility.getStringData(1, 1, "Loginpage");*/
+	public void verifyWhetherUserIsAbleToLoginWithValidUsernameAndInvalidPassword() throws IOException {
+		String usernamevalue = ExcelUtility.getStringData(1, 0, "Loginpage");
+		String passwordvalue = ExcelUtility.getStringData(1, 1, "Loginpage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameOnUserNameField(usernamevalue).enterPasswordOnPasswordField(passwordvalue).SignInClick();
 		String expected = "7rmart supermarket";
@@ -37,9 +38,9 @@ public class LoginTest extends Base {
 	}
 
 	@Test(priority = 3, description = "Verify user is able to login with invalid username and valid password")
-	public void verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndValidPassword(String usernamevalue, String passwordvalue) throws IOException {
-		/*String usernamevalue = ExcelUtility.getStringData(2, 0, "Loginpage");
-		String passwordvalue = ExcelUtility.getStringData(2, 1, "Loginpage");*/
+	public void verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndValidPassword() throws IOException {
+		String usernamevalue = ExcelUtility.getStringData(2, 0, "Loginpage");
+		String passwordvalue = ExcelUtility.getStringData(2, 1, "Loginpage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameOnUserNameField(usernamevalue).enterPasswordOnPasswordField(passwordvalue).SignInClick();
 		String expected = "Sign in to start your session";

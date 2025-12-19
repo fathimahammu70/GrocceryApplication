@@ -4,13 +4,15 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browsers" value="chrome"/>
     <classes>
-      <class name="testscripts.HomeTest">
+      <class name="testscripts.LoginTest">
         <methods>
           <include name="initializeBrowser"/>
           <include name="driverQuit"/>
-          <include name="verifyWhetherUserIsAbleToSuccessfullyLogout"/>
+          <include name="verifyWhetherUserIsAbleToLoginWithValidUsernameAndInvalidPassword"/>
+          <include name="verifyWhetherUserIsAbleToLoginWithInvalidUsernameAndValidPassword"/>
+          <include name="verifyWhetherUserIsAbleToLoginWithValidcredentials"/>
         </methods>
-      </class> <!-- testscripts.HomeTest -->
+      </class> <!-- testscripts.LoginTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

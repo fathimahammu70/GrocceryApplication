@@ -20,12 +20,5 @@ public class PageUtility {
 		select.selectByIndex(index);
 	}
 
-	public void clickButton(WebElement element) {
-		element.click();
-	}
-
-	public void clickCheckbox(WebElement element) {
-		element.click();
-	}
 
 }
