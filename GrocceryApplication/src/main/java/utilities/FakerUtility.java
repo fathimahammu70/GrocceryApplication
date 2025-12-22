@@ -2,7 +2,7 @@ package utilities;
 
 import com.github.javafaker.Faker;
 
-public class FakerUtility {
+public class FakerUtility {//predefined cls hlps in generating fake datas 
 	Faker faker = new Faker();
 
 	public String createRandomUserName() {

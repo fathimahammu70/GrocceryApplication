@@ -10,7 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
-public class ScreenshotUtility {
+public class ScreenshotUtility {//helps to capture the current situation of the brwser when the tstcse is failed
 	public void getScreenshot(WebDriver driver, String failedTestCase) throws IOException {
 
 		TakesScreenshot scrShot = (TakesScreenshot) driver;

@@ -12,27 +12,27 @@ import com.aventstack.extentreports.Status;
 import automationCore.Base;
 import utilities.ExtentReportUtility;
 
-public class Listeners extends Base implements ITestListener {
+public class Listeners extends Base implements ITestListener {//predefined interface
 	ExtentTest test;
-	ExtentReports extent = ExtentReportUtility.createExtentReports();
+	ExtentReports extent = ExtentReportUtility.createExtentReports();//configure extentReportUtility 
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+ 
+	public void onTestStart(ITestResult result) {//executed before each test execution
 
-	public void onTestStart(ITestResult result) {
-
-		ITestListener.super.onTestStart(result);
+		ITestListener.super.onTestStart(result);//fetch the method name and attached to the report with the hlp of get method name
 		test = extent.createTest(result.getMethod().getMethodName());
 		extentTest.set(test);
 
 	}
 
-	public void onTestSuccess(ITestResult result) {
+	public void onTestSuccess(ITestResult result) {//invoke when a testcases being passed
 
 		ITestListener.super.onTestSuccess(result);
 		extentTest.get().log(Status.PASS, "Test Passed");
 
 	}
 
-	public void onTestFailure(ITestResult result) {
+	public void onTestFailure(ITestResult result) {//invoke when a testcases being failed
 
 		ITestListener.super.onTestFailure(result);
 
@@ -68,7 +68,7 @@ public class Listeners extends Base implements ITestListener {
 		}
 	}
 
-	public void onTestSkipped(ITestResult result) {
+	public void onTestSkipped(ITestResult result) {//automtically invoke when a test case is skipped
 
 		ITestListener.super.onTestSkipped(result);
 		extentTest.get().log(Status.SKIP, "Test Skipped");
@@ -76,22 +76,22 @@ public class Listeners extends Base implements ITestListener {
 
 	}
 
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {//when a test fails but is still within the allowed success percentage
 
 		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
 	}
 
-	public void onTestFailedWithTimeout(ITestResult result) {
+	public void onTestFailedWithTimeout(ITestResult result) {//when a test fails because it exceeded the time limit
 
 		ITestListener.super.onTestFailedWithTimeout(result);
 	}
 
-	public void onStart(ITestContext context) {
+	public void onStart(ITestContext context) {// This method is executed before any test methods start running
 
 		ITestListener.super.onStart(context);
 	}
 
-	public void onFinish(ITestContext context) {
+	public void onFinish(ITestContext context) {//executed after all test methods have finished execution
 
 		ITestListener.super.onFinish(context);
 		extent.flush();// report not generate properly

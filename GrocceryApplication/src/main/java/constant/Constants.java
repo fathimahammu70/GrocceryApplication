@@ -17,4 +17,5 @@ public class Constants {
 
 	public static final String ADDNEWSERROR = "Alert is Not Found";
 	public static final String SEARCHNEWSERROR = "Search result does not match expected news title";
+	
 }

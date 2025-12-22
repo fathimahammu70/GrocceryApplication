@@ -15,7 +15,7 @@ public class ExcelUtility {
 	static XSSFWorkbook w;
 	static XSSFSheet sh;
 
-	public static String getStringData(int row, int col, String sheet) throws IOException {
+	public static String getStringData(int row, int col, String sheet) throws IOException {//help in reading the string value from an excel file
 		f = new FileInputStream(Constants.EXCELFILE);
 		w = new XSSFWorkbook(f);
 		sh = w.getSheet(sheet);
